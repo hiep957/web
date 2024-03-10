@@ -1,0 +1,136 @@
+*{
+   box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    opacity: 0.7;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    height: 600px;
+    width: 400px;
+    /* display: flex;
+    flex-direction: column; */
+    padding: 16px;
+}
+
+
+
+.input {
+    display: flex; 
+    flex-direction: column;
+}
+
+#name {
+    width: 180px;
+    border-radius: 5px;
+    background: #e6e6e6a2;
+    height: 40px;
+    border: 1px solid #aaaa;
+    font-size: 15px;
+    padding: 10px;
+    
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    
+}
+
+
+
+
+#sdtemail {
+    width: 370px;
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid #aaaa;
+    background: #e6e6e6a2;
+}
+
+.sdtemail {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+}
+
+
+.password {
+    width: 370px;
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid #aaaa;
+    background: #e6e6e6a2;
+    padding: 10px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+}
+
+.sub_title_2 {
+    margin-bottom: 0px;
+}
+select {
+    width: 120px;
+    height: 35px;
+    border: 1px solid #aaaa;
+    border-radius: 5px;
+}
+
+
+.gender {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+#all_gender {
+    width: 117px;
+    height: 35px;
+    border: 1px solid #aaaa;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding:12px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+}
+
+
+.submit {
+    width: 200px;
+    height: 40px;
+    background: #00a400;
+    border-radius: 5px;
+    color: white;
+    font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif !important;
+    font-weight: bold;
+    
+    border: none;
+    margin-left: 25%;
+    margin-top: 20px;
+   
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}

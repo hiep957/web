@@ -38,31 +38,37 @@
       </div>
       <hr />
 
-      <form action="">
+      <form action="" onsubmit="return validateForm()">
         <div class="input">
           <div class="name">
             <input
               type="text"
               placeholder="Họ"
               class="fristname"
-              id="name"
-              required
+              id="name1"
+              onfocus="hideErrorName1()"
             />
             <input
               type="text"
               placeholder="Tên"
               class="lastname"
-              id="name"
-              required
+              id="name2"
+              onfocus="hideErrorName2()"
             />
+            
           </div>
+          <div id="name1-error" style="color: red;"></div>
+          <div id="name2-error" style="color: red;"></div>
           <input
             type="text"
             placeholder="Số điện thoại hoặc email"
             id="sdtemail"
             class="sdtemail"
+            onfocus="hideErrorElement()"
           />
-          <input type="password" placeholder="Mật khẩu mới" class="password" />
+          <div id="email-error" style="color: red;"></div> <!-- Error message container -->
+          <input type="password" placeholder="Mật khẩu mới" class="password"  id="password" onfocus="hideErrorPassword()" />
+          <div id="password-error" style="color:red"></div>
         </div>
 
         <p
@@ -167,4 +173,5 @@
       </form>
     </div>
   </body>
+  <script src="main.js"></script>
 </html>

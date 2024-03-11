@@ -10,6 +10,11 @@ function validateForm() {
   var errorname1 = document.getElementById("name1-error");
   var errorname2 = document.getElementById("name2-error");
 
+  var daySelect = document.getElementById("day");
+  var monthSelect = document.getElementById("month");
+  var yearSelect = document.getElementById("year");
+  var errorDateOfBirth = document.getElementById("dob-error");
+
   var isValid = true;
   var emailValue = emailInput.value.trim();
 
@@ -68,6 +73,45 @@ function validateForm() {
     }
   }
 
+  console.log(daySelect.value);
+  console.log(monthSelect.value);
+  console.log(yearSelect.value);
+
+   // Validation for date of birth
+   if (daySelect.value === "" || monthSelect.value === "" || yearSelect.value === "") {
+    errorDateOfBirth.innerHTML = "Vui lòng chọn ngày sinh đầy đủ.";
+    errorDateOfBirth.style.color = "red";
+    isValid = false;
+  } else {
+    // Clear any previous error message
+    errorDateOfBirth.innerHTML = "";
+    
+    // Additional validation for date (if needed)
+    // For example, checking if February 29 is valid on leap years
+  }
+
+  var genderRadios = document.querySelectorAll('input[name="gender"]');
+  var genderError = document.getElementById("gender-error");
+
+  var isValidGender = false;
+
+  // Check if any gender radio button is checked
+  for (var i = 0; i < genderRadios.length; i++) {
+    if (genderRadios[i].checked) {
+      isValidGender = true;
+      break;
+    }
+  }
+
+  if (!isValidGender) {
+    genderError.innerHTML = "Vui lòng chọn giới tính.";
+    genderError.style.color = "red";
+    isValid = false;
+  } else {
+    genderError.innerHTML = "";
+  }
+
+
   return isValid;
 }
 
@@ -87,5 +131,20 @@ function hideErrorElement(){
 function hideErrorPassword() {
     var errorPassword = document.getElementById("password-error");
     errorPassword.innerHTML = "";
+}
+
+function showCustomSalutationInput() {
+  var customSalutationInput = document.getElementById("custom-salutation-input");
+  var customGenderRadio = document.querySelector('input[name="gender"][value="other"]');
+  var maleGenderRadio = document.querySelector('input[name="gender"][value=male]');
+  var container = document.getElementById('container');
+  if (!customGenderRadio.checked||maleGenderRadio.checked||!customGenderRadio.checked) {
+      customSalutationInput.style.display = "none";
+      
+
+  } else {
+      customSalutationInput.style.display = "block";
+      
+  }
 }
 

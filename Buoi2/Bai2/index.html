@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="top">
+        <div>
+          <h2
+            style="
+              margin-top: 0px;
+              font-weight: 600px;
+              color: #1c1e21;
+              font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+              font-size: 32px;
+              line-height: 38px;
+              margin-bottom: 0;
+            "
+          >
+            Đăng ký
+          </h2>
+          <p
+            style="
+              margin-top: 0px;
+              color: #606770;
+              font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+              font-size: 15px;
+              line-height: 24px;
+            "
+          >
+            Nhanh chóng và dễ dàng
+          </p>
+        </div>
+      </div>
+      <hr />
+
+      <form action="" onsubmit="return validateForm()">
+        <div class="input">
+          <div class="name">
+            <input
+              type="text"
+              placeholder="Họ"
+              class="fristname"
+              id="name1"
+              onfocus="hideErrorName1()"
+            />
+            <input
+              type="text"
+              placeholder="Tên"
+              class="lastname"
+              id="name2"
+              onfocus="hideErrorName2()"
+            />
+          </div>
+          <div id="name1-error" style="color: red"></div>
+          <div id="name2-error" style="color: red"></div>
+          <input
+            type="text"
+            placeholder="Số điện thoại hoặc email"
+            id="sdtemail"
+            class="sdtemail"
+            onfocus="hideErrorElement()"
+          />
+          <div id="email-error" style="color: red"></div>
+          <!-- Error message container -->
+          <input
+            type="password"
+            placeholder="Mật khẩu mới"
+            class="password"
+            id="password"
+            onfocus="hideErrorPassword()"
+          />
+          <div id="password-error" style="color: red"></div>
+        </div>
+
+        <p
+          style="
+            color: #606770;
+            font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 20px;
+            margin-bottom: 0;
+            margin-top: 10px;
+          "
+          class="sub_title_2"
+          id="sub_title"
+        >
+          Ngày sinh
+        </p>
+
+        <!-- Error message container for date of birth -->
+        <div>
+          <select id="day">
+            <option value="">Ngày</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="1">4</option>
+            <option value="1">5</option>
+            <option value="1">6</option>
+            <option value="1">7</option>
+            <option value="1">8</option>
+            <option value="1">9</option>
+            <option value="1">10</option>
+          </select>
+          <select id="month">
+            <option value="">Tháng</option>
+            <option value="1">Tháng 1</option>
+            <option value="1">Tháng 2</option>
+            <option value="1">Tháng 3</option>
+            <option value="1">Tháng 4</option>
+            <option value="1">Tháng 5</option>
+            <option value="1">Tháng 6</option>
+            <option value="1">Tháng 7</option>
+            <option value="1">Tháng 7</option>
+            <option value="1">Tháng 8</option>
+            <option value="1">Tháng 9</option>
+            <option value="1">Tháng 10</option>
+            <option value="1">Tháng 11</option>
+            <option value="1">Tháng 12</option>
+          </select>
+          <select id="year">
+            <option value="">Năm</option>
+            <option value="1">2022</option>
+            <option value="1">2021</option>
+            <option value="1">2020</option>
+            <option value="1">2019</option>
+            <option value="1">2018</option>
+            <option value="1">2017</option>
+            <option value="1">2016</option>
+            <option value="1">2015</option>
+            <option value="1">2014</option>
+            <option value="1">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+          </select>
+        </div>
+
+        <div id="dob-error" style="color: red"></div>
+
+        <p
+          class="sub_title_2"
+          style="
+            color: #606770;
+            font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 20px;
+            margin-bottom: 0;
+            margin-top: 10px;
+          "
+        >
+          Giới tính
+        </p>
+        <div class="gender">
+          <div class="female" id="all_gender">
+            <label for="female"><b>Female</b> </label>
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              onchange="showCustomSalutationInput()"
+              checked="true"
+            />
+          </div>
+          <div class="male" id="all_gender">
+            <label for="male"><b>Male</b></label>
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              onchange="showCustomSalutationInput()"
+            />
+          </div>
+          <div class="other" id="all_gender">
+            <label for="other"><b>Custom</b></label>
+            <input
+              type="radio"
+              name="gender"
+              value="other"
+              onchange="showCustomSalutationInput()"
+              onclick=""
+            />
+          </div>
+        </div>
+        <div id="gender-error"></div>
+        <div
+          id="custom-salutation-input"
+          style="display: none; margin-top: 10px"
+        >
+          <select name="" id="" style="width: 100%">
+            <option value="">Chọn danh xưng</option>
+            <option value="">Cô ấy: "Chúc cô ấy sinh nhật vui vẻ!"</option>
+            <option value="">Anh ấy: "Chúc anh ấy sinh nhật vui vẻ!"</option>
+            <option value="">Họ: "Chúc họ sinh nhật vui vẻ!"</option>
+          </select>
+          <p
+            class="sub_title_2"
+            style="
+              color: #606770;
+              font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+              font-size: 12px;
+              font-weight: normal;
+              line-height: 20px;
+              margin-bottom: 0;
+              margin-top: 10px;
+            "
+          >
+            Danh tính của bạn sẽ hiện với mọi người
+          </p>
+          <input
+            type="text"
+            placeholder="Giới tính (không bắt buộc)"
+            id="sdtemail"
+            class="sdtemail"
+          />
+        </div>
+        <p
+          style="
+            color: #777;
+            font-size: 11px;
+            font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+            margin-top: 10px;
+          "
+          sub_title_4
+        >
+          Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ
+          của bạn lên Facebook. 
+          <a href="">Tìm hiểu thêm.</a>
+        </p>
+
+        <p
+          style="
+            color: #777;
+            font-size: 11px;
+            font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+            margin-top: 10px;
+          "
+          sub_title_4
+        >
+          Bằng cách nhấp vào Đăng ký, bạn đồng ý với
+          <a href="#"> Điều khoản, Chính sách quyền riêng tư</a> và
+          <a href="#">Chính sách cookie</a>
+          của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và
+          hủy nhận bất kỳ lúc nào.
+        </p>
+        <input type="submit" value="Đăng ký" class="submit" />
+      </form>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

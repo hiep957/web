@@ -15,7 +15,7 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
-    height: 600px;
+    
     width: 400px;
     /* display: flex;
     flex-direction: column; */
@@ -120,8 +120,8 @@ select {
 
 
 .submit {
-    width: 200px;
-    height: 40px;
+    
+    height: 36px;
     background: #00a400;
     border-radius: 5px;
     color: white;
@@ -129,10 +129,14 @@ select {
     font-weight: bold;
     
     border: none;
-    margin-left: 25%;
-    margin-top: 20px;
-   
+    /* margin-left: 25%;
+    margin-top: 20px; */
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
+    margin-left: 25%;
 }
 
 a {
